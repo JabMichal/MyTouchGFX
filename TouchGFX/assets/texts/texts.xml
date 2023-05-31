@@ -6,6 +6,24 @@
   <Texts>
     <TextGroup Id="Group1" />
     <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_LD5P" Alignment="Left" TypographyId="Typo_50">
+        <Translation Language="GB">time setting:</Translation>
+      </Text>
+      <Text Id="__SingleUse_EPN6" Alignment="Left" TypographyId="Typo_50">
+        <Translation Language="GB">ms</Translation>
+      </Text>
+      <Text Id="__SingleUse_TO73" Alignment="Left" TypographyId="Typo_50">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_00LK" Alignment="Left" TypographyId="Typo_70">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_DYLH" Alignment="Center" TypographyId="Typo_40">
+        <Translation Language="GB">SEND</Translation>
+      </Text>
+      <Text Id="__SingleUse_58PG" Alignment="Center" TypographyId="Typo_40">
+        <Translation Language="GB">SET TIME</Translation>
+      </Text>
       <Text Id="__SingleUse_CBNZ" Alignment="Left" TypographyId="Typo_50">
         <Translation Language="GB">0</Translation>
       </Text>

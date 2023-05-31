@@ -17,107 +17,46 @@ MainScreenViewBase::MainScreenViewBase() :
     image_background.setBitmap(touchgfx::Bitmap(BITMAP_CARBON_FIBER_WALLPAPER_ID));
     add(image_background);
 
-    buttonWithLabel1.setXY(346, 317);
-    buttonWithLabel1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_PRESSED_ID));
-    buttonWithLabel1.setLabelText(touchgfx::TypedText(T___SINGLEUSE_UFAI));
-    buttonWithLabel1.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel1.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel1.setAction(buttonCallback);
-    add(buttonWithLabel1);
+    textArea_ms_1.setXY(657, 190);
+    textArea_ms_1.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea_ms_1.setLinespacing(0);
+    textArea_ms_1.setTypedText(touchgfx::TypedText(T___SINGLEUSE_EPN6));
+    add(textArea_ms_1);
 
-    buttonWithLabel2.setXY(494, 317);
-    buttonWithLabel2.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_PRESSED_ID));
-    buttonWithLabel2.setLabelText(touchgfx::TypedText(T___SINGLEUSE_KDJP));
-    buttonWithLabel2.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel2.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel2.setAction(buttonCallback);
-    add(buttonWithLabel2);
+    textArea_timeSetting.setXY(58, 190);
+    textArea_timeSetting.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea_timeSetting.setLinespacing(0);
+    textArea_timeSetting.setTypedText(touchgfx::TypedText(T___SINGLEUSE_LD5P));
+    add(textArea_timeSetting);
 
-    buttonWithLabel3.setXY(642, 317);
-    buttonWithLabel3.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_PRESSED_ID));
-    buttonWithLabel3.setLabelText(touchgfx::TypedText(T___SINGLEUSE_HMP2));
-    buttonWithLabel3.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel3.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel3.setAction(buttonCallback);
-    add(buttonWithLabel3);
+    textArea_time.setPosition(470, 178, 170, 85);
+    textArea_time.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    textArea_time.setLinespacing(0);
+    Unicode::snprintf(textArea_timeBuffer, TEXTAREA_TIME_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_TO73).getText());
+    textArea_time.setWildcard(textArea_timeBuffer);
+    textArea_time.setTypedText(touchgfx::TypedText(T___SINGLEUSE_00LK));
+    add(textArea_time);
 
-    buttonWithLabel6.setXY(642, 171);
-    buttonWithLabel6.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_PRESSED_ID));
-    buttonWithLabel6.setLabelText(touchgfx::TypedText(T___SINGLEUSE_44G7));
-    buttonWithLabel6.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel6.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel6.setAction(buttonCallback);
-    add(buttonWithLabel6);
+    buttonWithLabel_setTime.setXY(58, 377);
+    buttonWithLabel_setTime.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_MEDIUM_ROUNDED_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_MEDIUM_ROUNDED_PRESSED_ID));
+    buttonWithLabel_setTime.setLabelText(touchgfx::TypedText(T___SINGLEUSE_58PG));
+    buttonWithLabel_setTime.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    buttonWithLabel_setTime.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    buttonWithLabel_setTime.setAction(buttonCallback);
+    add(buttonWithLabel_setTime);
 
-    buttonWithLabel5.setXY(494, 171);
-    buttonWithLabel5.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_PRESSED_ID));
-    buttonWithLabel5.setLabelText(touchgfx::TypedText(T___SINGLEUSE_WAGS));
-    buttonWithLabel5.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel5.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel5.setAction(buttonCallback);
-    add(buttonWithLabel5);
+    buttonWithLabel_send.setXY(430, 377);
+    buttonWithLabel_send.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_MEDIUM_ROUNDED_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_MEDIUM_ROUNDED_PRESSED_ID));
+    buttonWithLabel_send.setLabelText(touchgfx::TypedText(T___SINGLEUSE_DYLH));
+    buttonWithLabel_send.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    buttonWithLabel_send.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
+    buttonWithLabel_send.setAction(buttonCallback);
+    add(buttonWithLabel_send);
 
-    buttonWithLabel4.setXY(346, 171);
-    buttonWithLabel4.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_PRESSED_ID));
-    buttonWithLabel4.setLabelText(touchgfx::TypedText(T___SINGLEUSE_J05E));
-    buttonWithLabel4.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel4.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel4.setAction(buttonCallback);
-    add(buttonWithLabel4);
-
-    buttonWithLabel9.setXY(642, 23);
-    buttonWithLabel9.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_PRESSED_ID));
-    buttonWithLabel9.setLabelText(touchgfx::TypedText(T___SINGLEUSE_754X));
-    buttonWithLabel9.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel9.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel9.setAction(buttonCallback);
-    add(buttonWithLabel9);
-
-    buttonWithLabel8.setXY(494, 23);
-    buttonWithLabel8.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_PRESSED_ID));
-    buttonWithLabel8.setLabelText(touchgfx::TypedText(T___SINGLEUSE_HJ0D));
-    buttonWithLabel8.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel8.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel8.setAction(buttonCallback);
-    add(buttonWithLabel8);
-
-    buttonWithLabel7.setXY(346, 23);
-    buttonWithLabel7.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_ICON_ROUNDED_MEDIUM_FILL_PRESSED_ID));
-    buttonWithLabel7.setLabelText(touchgfx::TypedText(T___SINGLEUSE_JRUT));
-    buttonWithLabel7.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel7.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabel7.setAction(buttonCallback);
-    add(buttonWithLabel7);
-
-    buttonWithLabelENT.setXY(18, 395);
-    buttonWithLabelENT.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_MEDIUM_ROUNDED_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_MEDIUM_ROUNDED_PRESSED_ID));
-    buttonWithLabelENT.setLabelText(touchgfx::TypedText(T___SINGLEUSE_LO7B));
-    buttonWithLabelENT.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabelENT.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabelENT.setAction(buttonCallback);
-    add(buttonWithLabelENT);
-
-    buttonWithLabelBSPC.setXY(18, 317);
-    buttonWithLabelBSPC.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_MEDIUM_ROUNDED_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_60_MEDIUM_ROUNDED_PRESSED_ID));
-    buttonWithLabelBSPC.setLabelText(touchgfx::TypedText(T___SINGLEUSE_BE33));
-    buttonWithLabelBSPC.setLabelColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabelBSPC.setLabelColorPressed(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    buttonWithLabelBSPC.setAction(buttonCallback);
-    add(buttonWithLabelBSPC);
-
-    textArea_ms.setXY(241, 200);
-    textArea_ms.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    textArea_ms.setLinespacing(0);
-    textArea_ms.setTypedText(touchgfx::TypedText(T___SINGLEUSE_FLUR));
-    add(textArea_ms);
-
-    textArea_timeSettings.setPosition(34, 182, 193, 85);
-    textArea_timeSettings.setColor(touchgfx::Color::getColorFromRGB(255, 255, 255));
-    textArea_timeSettings.setLinespacing(0);
-    Unicode::snprintf(textArea_timeSettingsBuffer, TEXTAREA_TIMESETTINGS_SIZE, "%s", touchgfx::TypedText(T___SINGLEUSE_CBNZ).getText());
-    textArea_timeSettings.setWildcard(textArea_timeSettingsBuffer);
-    textArea_timeSettings.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RZV9));
-    add(textArea_timeSettings);
+    toggleButton_diode.setXY(235, 76);
+    toggleButton_diode.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_MEDIUM_ROUND_TEXT_ON_ACTIVE_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_TOGGLEBUTTON_MEDIUM_ROUND_TEXT_OFF_NORMAL_ID));
+    toggleButton_diode.setAction(buttonCallback);
+    add(toggleButton_diode);
 }
 
 MainScreenViewBase::~MainScreenViewBase()
@@ -132,81 +71,25 @@ void MainScreenViewBase::setupScreen()
 
 void MainScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& src)
 {
-    if (&src == &buttonWithLabel1)
+    if (&src == &buttonWithLabel_setTime)
     {
-        //Interaction_1clicked
-        //When buttonWithLabel1 clicked call virtual function
-        //Call write1
-        write1();
+        //Interaction_setTimeClicked
+        //When buttonWithLabel_setTime clicked call virtual function
+        //Call setTime
+        setTime();
     }
-    if (&src == &buttonWithLabel2)
+    if (&src == &buttonWithLabel_send)
     {
-        //Interaction_2clicked
-        //When buttonWithLabel2 clicked call virtual function
-        //Call write2
-        write2();
+        //Interaction_sendClicked
+        //When buttonWithLabel_send clicked call virtual function
+        //Call sendTime
+        sendTime();
     }
-    if (&src == &buttonWithLabel3)
+    if (&src == &toggleButton_diode)
     {
-        //Interaction_3clicked
-        //When buttonWithLabel3 clicked call virtual function
-        //Call write3
-        write3();
-    }
-    if (&src == &buttonWithLabel4)
-    {
-        //Interaction_4clicked
-        //When buttonWithLabel4 clicked call virtual function
-        //Call write4
-        write4();
-    }
-    if (&src == &buttonWithLabel5)
-    {
-        //Interaction_5clicked
-        //When buttonWithLabel5 clicked call virtual function
-        //Call write5
-        write5();
-    }
-    if (&src == &buttonWithLabel6)
-    {
-        //Interaction_6clicked
-        //When buttonWithLabel6 clicked call virtual function
-        //Call write6
-        write6();
-    }
-    if (&src == &buttonWithLabel7)
-    {
-        //Interaction_7clicked
-        //When buttonWithLabel7 clicked call virtual function
-        //Call write7
-        write7();
-    }
-    if (&src == &buttonWithLabel8)
-    {
-        //Interaction_8clicked
-        //When buttonWithLabel8 clicked call virtual function
-        //Call write8
-        write8();
-    }
-    if (&src == &buttonWithLabel9)
-    {
-        //Interaction_9clicked
-        //When buttonWithLabel9 clicked call virtual function
-        //Call write9
-        write9();
-    }
-    if (&src == &buttonWithLabelENT)
-    {
-        //Interaction_ENTclicked
-        //When buttonWithLabelENT clicked call virtual function
-        //Call enterSettings
-        enterSettings();
-    }
-    if (&src == &buttonWithLabelBSPC)
-    {
-        //Interaction_BSPCclicked
-        //When buttonWithLabelBSPC clicked call virtual function
-        //Call backspace
-        backspace();
+        //Interaction_toggleDiode
+        //When toggleButton_diode clicked execute C++ code
+        //Execute C++ code
+        HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_13);
     }
 }

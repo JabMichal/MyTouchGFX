@@ -2,7 +2,7 @@
   "Application": {
     "Screens": [
       {
-        "Name": "MainScreen",
+        "Name": "SetTimeScreen",
         "Components": [
           {
             "Type": "Image",
@@ -422,6 +422,164 @@
             "Action": {
               "Type": "ActionCustom",
               "FunctionName": "backspace"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "MainScreen",
+        "Components": [
+          {
+            "Type": "Image",
+            "Name": "image_background",
+            "Y": -20,
+            "Width": 800,
+            "Height": 500,
+            "RelativeFilename": "carbon-fiber-wallpaper.png"
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea_ms_1",
+            "X": 657,
+            "Y": 190,
+            "Width": 74,
+            "Height": 61,
+            "TextId": "__SingleUse_EPN6",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea_timeSetting",
+            "X": 58,
+            "Y": 190,
+            "Width": 324,
+            "Height": 61,
+            "TextId": "__SingleUse_LD5P",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "AutoSize": true
+          },
+          {
+            "Type": "TextArea",
+            "Name": "textArea_time",
+            "X": 470,
+            "Y": 178,
+            "Width": 170,
+            "Height": 85,
+            "TextId": "__SingleUse_00LK",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Wildcard1": {
+              "TextId": "__SingleUse_TO73",
+              "UseBuffer": true,
+              "BufferSize": 10
+            }
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel_setTime",
+            "X": 58,
+            "Y": 377,
+            "Width": 312,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_medium_rounded_active.png",
+            "TextId": "__SingleUse_58PG",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_60\\medium_rounded_active.json"
+          },
+          {
+            "Type": "ButtonWithLabel",
+            "Name": "buttonWithLabel_send",
+            "X": 430,
+            "Y": 377,
+            "Width": 312,
+            "Height": 60,
+            "Pressed": "__generated\\alternate_theme_images_widgets_button_regular_height_60_medium_rounded_pressed.png",
+            "Released": "__generated\\alternate_theme_images_widgets_button_regular_height_60_medium_rounded_active.png",
+            "TextId": "__SingleUse_DYLH",
+            "ReleasedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "PressedColor": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "TextRotation": "0",
+            "Preset": "alternate_theme\\presets\\button\\regular\\height_60\\medium_rounded_active.json"
+          },
+          {
+            "Type": "ToggleButton",
+            "Name": "toggleButton_diode",
+            "X": 235,
+            "Y": 76,
+            "Width": 138,
+            "Height": 50,
+            "Pressed": "__generated\\alternate_theme_images_widgets_togglebutton_medium_round_text_off_normal.png",
+            "Released": "__generated\\alternate_theme_images_widgets_togglebutton_medium_round_text_on_active.png",
+            "Preset": "alternate_theme\\presets\\togglebutton\\medium\\round_active_text.json"
+          }
+        ],
+        "Interactions": [
+          {
+            "InteractionName": "Interaction_setTimeClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel_setTime"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "setTime"
+            }
+          },
+          {
+            "InteractionName": "Interaction_sendClicked",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "buttonWithLabel_send"
+            },
+            "Action": {
+              "Type": "ActionCustom",
+              "FunctionName": "sendTime"
+            }
+          },
+          {
+            "InteractionName": "Interaction_toggleDiode",
+            "Trigger": {
+              "Type": "TriggerClicked",
+              "TriggerComponent": "toggleButton_diode"
+            },
+            "Action": {
+              "Type": "ActionExecuteCode",
+              "Includes": "#include \"stm32f4xx_hal.h\"",
+              "Code": "HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_13);"
             }
           }
         ]

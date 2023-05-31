@@ -12,6 +12,8 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
+#include <gui/settimescreen_screen/SetTimeScreenView.hpp>
+#include <gui/settimescreen_screen/SetTimeScreenPresenter.hpp>
 #include <gui/mainscreen_screen/MainScreenView.hpp>
 #include <gui/mainscreen_screen/MainScreenPresenter.hpp>
 
@@ -36,8 +38,9 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< MainScreenView,
-            touchgfx::meta::Nil
+    typedef touchgfx::meta::TypeList< SetTimeScreenView,
+            touchgfx::meta::TypeList< MainScreenView,
+            touchgfx::meta::Nil >
             > GeneratedViewTypes;
 
     /**
@@ -49,8 +52,9 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< MainScreenPresenter,
-            touchgfx::meta::Nil
+    typedef touchgfx::meta::TypeList< SetTimeScreenPresenter,
+            touchgfx::meta::TypeList< MainScreenPresenter,
+            touchgfx::meta::Nil >
             > GeneratedPresenterTypes;
 
     /**

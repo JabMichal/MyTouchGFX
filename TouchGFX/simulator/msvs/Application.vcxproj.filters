@@ -184,6 +184,18 @@
     <Filter Include="Header Files\generated\simulator\include\simulator\video">
       <UniqueIdentifier>8502CC72-30B4-083A-D870-9B873835140C</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\gui\settimescreen_screen">
+      <UniqueIdentifier>AD568F2F-2741-D906-1740-AE06F1C89814</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\gui\settimescreen_screen">
+      <UniqueIdentifier>18526442-3514-9CB3-C55A-36481DBADCDE</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\generated\gui_generated\settimescreen_screen">
+      <UniqueIdentifier>4BB26653-BA9B-F091-061D-347BB27522E6</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\generated\gui_generated\settimescreen_screen">
+      <UniqueIdentifier>FBE77E48-280B-86C0-E217-4614573C7DB1</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="$(TouchGFXReleasePath)\framework\source\platform\driver\touch\SDL2TouchController.cpp">
@@ -224,6 +236,15 @@
     </ClCompile>
     <ClCompile Include="..\..\generated\simulator\src\video\SoftwareMJPEGDecoder.cpp">
       <Filter>Source Files\generated\simulator\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\settimescreen_screen\SetTimeScreenPresenter.cpp">
+      <Filter>Source Files\gui\settimescreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\gui\src\settimescreen_screen\SetTimeScreenView.cpp">
+      <Filter>Source Files\gui\settimescreen_screen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\generated\gui_generated\src\settimescreen_screen\SetTimeScreenViewBase.cpp">
+      <Filter>Source Files\generated\gui_generated\settimescreen_screen</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -675,6 +696,15 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\simulator\include\simulator\video\SoftwareMJPEGDecoder.hpp">
       <Filter>Header Files\generated\simulator\include\simulator\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\settimescreen_screen\SetTimeScreenPresenter.hpp">
+      <Filter>Header Files\gui\settimescreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\gui\include\gui\settimescreen_screen\SetTimeScreenView.hpp">
+      <Filter>Header Files\gui\settimescreen_screen</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\settimescreen_screen\SetTimeScreenViewBase.hpp">
+      <Filter>Header Files\generated\gui_generated\settimescreen_screen</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
