@@ -380,6 +380,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Font_verdana_40_4bpp_0.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/Font_verdana_50_4bpp_0.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Font_verdana_50_4bpp_0.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Font_verdana_70_4bpp_0.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Font_verdana_70_4bpp_0.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/GeneratedFont.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/GeneratedFont.cpp</locationURI>
@@ -400,6 +410,16 @@
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Kerning_verdana_40_4bpp.cpp</locationURI>
 		</link>
 		<link>
+			<name>Application/User/generated/Kerning_verdana_50_4bpp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Kerning_verdana_50_4bpp.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Kerning_verdana_70_4bpp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Kerning_verdana_70_4bpp.cpp</locationURI>
+		</link>
+		<link>
 			<name>Application/User/generated/Table_verdana_10_4bpp.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Table_verdana_10_4bpp.cpp</locationURI>
@@ -413,6 +433,16 @@
 			<name>Application/User/generated/Table_verdana_40_4bpp.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Table_verdana_40_4bpp.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Table_verdana_50_4bpp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Table_verdana_50_4bpp.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/Table_verdana_70_4bpp.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/fonts/src/Table_verdana_70_4bpp.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/UnmappedDataFont.cpp</name>
@@ -438,6 +468,26 @@
 			<name>Application/User/generated/SVGDatabase.cpp</name>
 			<type>1</type>
 			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/SVGDatabase.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_button_icon_rounded_medium_fill_active.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_icon_rounded_medium_fill_active.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_button_icon_rounded_medium_fill_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_icon_rounded_medium_fill_pressed.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_60_medium_rounded_active.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_60_medium_rounded_active.cpp</locationURI>
+		</link>
+		<link>
+			<name>Application/User/generated/image_alternate_theme_images_widgets_button_regular_height_60_medium_rounded_pressed.cpp</name>
+			<type>1</type>
+			<locationURI>PARENT-1-PROJECT_LOC/TouchGFX/generated/images/src/__generated/image_alternate_theme_images_widgets_button_regular_height_60_medium_rounded_pressed.cpp</locationURI>
 		</link>
 		<link>
 			<name>Application/User/generated/image_carbon-fiber-wallpaper.cpp</name>

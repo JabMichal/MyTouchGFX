@@ -9,6 +9,9 @@
 #include <gui/mainscreen_screen/MainScreenPresenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
 #include <touchgfx/widgets/Image.hpp>
+#include <touchgfx/widgets/ButtonWithLabel.hpp>
+#include <touchgfx/widgets/TextArea.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class MainScreenViewBase : public touchgfx::View<MainScreenPresenter>
 {
@@ -16,6 +19,54 @@ public:
     MainScreenViewBase();
     virtual ~MainScreenViewBase();
     virtual void setupScreen();
+
+    /*
+     * Virtual Action Handlers
+     */
+    virtual void write1()
+    {
+        // Override and implement this function in MainScreen
+    }
+    virtual void write2()
+    {
+        // Override and implement this function in MainScreen
+    }
+    virtual void write3()
+    {
+        // Override and implement this function in MainScreen
+    }
+    virtual void write4()
+    {
+        // Override and implement this function in MainScreen
+    }
+    virtual void write5()
+    {
+        // Override and implement this function in MainScreen
+    }
+    virtual void write6()
+    {
+        // Override and implement this function in MainScreen
+    }
+    virtual void write7()
+    {
+        // Override and implement this function in MainScreen
+    }
+    virtual void write8()
+    {
+        // Override and implement this function in MainScreen
+    }
+    virtual void write9()
+    {
+        // Override and implement this function in MainScreen
+    }
+    virtual void enterSettings()
+    {
+        // Override and implement this function in MainScreen
+    }
+    virtual void backspace()
+    {
+        // Override and implement this function in MainScreen
+    }
 
 protected:
     FrontendApplication& application() {
@@ -26,9 +77,38 @@ protected:
      * Member Declarations
      */
     touchgfx::Box __background;
-    touchgfx::Image image1;
+    touchgfx::Image image_background;
+    touchgfx::ButtonWithLabel buttonWithLabel1;
+    touchgfx::ButtonWithLabel buttonWithLabel2;
+    touchgfx::ButtonWithLabel buttonWithLabel3;
+    touchgfx::ButtonWithLabel buttonWithLabel6;
+    touchgfx::ButtonWithLabel buttonWithLabel5;
+    touchgfx::ButtonWithLabel buttonWithLabel4;
+    touchgfx::ButtonWithLabel buttonWithLabel9;
+    touchgfx::ButtonWithLabel buttonWithLabel8;
+    touchgfx::ButtonWithLabel buttonWithLabel7;
+    touchgfx::ButtonWithLabel buttonWithLabelENT;
+    touchgfx::ButtonWithLabel buttonWithLabelBSPC;
+    touchgfx::TextArea textArea_ms;
+    touchgfx::TextAreaWithOneWildcard textArea_timeSettings;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXTAREA_TIMESETTINGS_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar textArea_timeSettingsBuffer[TEXTAREA_TIMESETTINGS_SIZE];
 
 private:
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<MainScreenViewBase, const touchgfx::AbstractButton&> buttonCallback;
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
 
 };
 

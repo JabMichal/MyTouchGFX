@@ -5,10 +5,57 @@
   </Languages>
   <Texts>
     <TextGroup Id="Group1" />
+    <TextGroup Id="Unsorted">
+      <Text Id="__SingleUse_CBNZ" Alignment="Left" TypographyId="Typo_50">
+        <Translation Language="GB">0</Translation>
+      </Text>
+      <Text Id="__SingleUse_RZV9" Alignment="Right" TypographyId="Typo_70">
+        <Translation Language="GB">&lt;value&gt;</Translation>
+      </Text>
+      <Text Id="__SingleUse_FLUR" Alignment="Left" TypographyId="Typo_50">
+        <Translation Language="GB">ms</Translation>
+      </Text>
+      <Text Id="__SingleUse_BE33" Alignment="Center" TypographyId="Typo_40">
+        <Translation Language="GB">BSPC</Translation>
+      </Text>
+      <Text Id="__SingleUse_LO7B" Alignment="Center" TypographyId="Typo_40">
+        <Translation Language="GB">ENT</Translation>
+      </Text>
+      <Text Id="__SingleUse_754X" Alignment="Center" TypographyId="Typo_50">
+        <Translation Language="GB">9</Translation>
+      </Text>
+      <Text Id="__SingleUse_HJ0D" Alignment="Center" TypographyId="Typo_50">
+        <Translation Language="GB">8</Translation>
+      </Text>
+      <Text Id="__SingleUse_JRUT" Alignment="Center" TypographyId="Typo_50">
+        <Translation Language="GB">7</Translation>
+      </Text>
+      <Text Id="__SingleUse_44G7" Alignment="Center" TypographyId="Typo_50">
+        <Translation Language="GB">6</Translation>
+      </Text>
+      <Text Id="__SingleUse_WAGS" Alignment="Center" TypographyId="Typo_50">
+        <Translation Language="GB">5</Translation>
+      </Text>
+      <Text Id="__SingleUse_J05E" Alignment="Center" TypographyId="Typo_50">
+        <Translation Language="GB">4</Translation>
+      </Text>
+      <Text Id="__SingleUse_HMP2" Alignment="Center" TypographyId="Typo_50">
+        <Translation Language="GB">3</Translation>
+      </Text>
+      <Text Id="__SingleUse_KDJP" Alignment="Center" TypographyId="Typo_50">
+        <Translation Language="GB">2</Translation>
+      </Text>
+      <Text Id="__SingleUse_UFAI" Alignment="Center" TypographyId="Typo_50">
+        <Translation Language="GB">1</Translation>
+      </Text>
+    </TextGroup>
   </Texts>
   <Typographies>
     <Typography Id="Default" Font="verdana.ttf" Size="20" Bpp="4" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Large" Font="verdana.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" />
     <Typography Id="Small" Font="verdana.ttf" Size="10" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typo_50" Font="verdana.ttf" Size="50" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typo_40" Font="verdana.ttf" Size="40" Bpp="4" Direction="LTR" FallbackCharacter="?" />
+    <Typography Id="Typo_70" Font="verdana.ttf" Size="70" Bpp="4" Direction="LTR" FallbackCharacter="?" />
   </Typographies>
 </TextDatabase>
