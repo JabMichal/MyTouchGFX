@@ -13,7 +13,7 @@
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/ToggleButton.hpp>
-#include "stm32f4xx_hal.h"
+//#include "stm32f4xx_hal.h"
 
 class MainScreenViewBase : public touchgfx::View<MainScreenPresenter>
 {
@@ -25,10 +25,6 @@ public:
     /*
      * Virtual Action Handlers
      */
-    virtual void setTime()
-    {
-        // Override and implement this function in MainScreen
-    }
     virtual void sendTime()
     {
         // Override and implement this function in MainScreen

@@ -9,10 +9,10 @@
 #include <touchgfx/Texts.hpp>
 #include <touchgfx/hal/HAL.hpp>
 #include <platform/driver/lcd/LCD16bpp.hpp>
-#include <gui/settimescreen_screen/SetTimeScreenView.hpp>
-#include <gui/settimescreen_screen/SetTimeScreenPresenter.hpp>
 #include <gui/mainscreen_screen/MainScreenView.hpp>
 #include <gui/mainscreen_screen/MainScreenPresenter.hpp>
+#include <gui/settimescreen_screen/SetTimeScreenView.hpp>
+#include <gui/settimescreen_screen/SetTimeScreenPresenter.hpp>
 
 using namespace touchgfx;
 
@@ -42,4 +42,28 @@ void FrontendApplicationBase::gotoMainScreenScreenNoTransition()
 void FrontendApplicationBase::gotoMainScreenScreenNoTransitionImpl()
 {
     touchgfx::makeTransition<MainScreenView, MainScreenPresenter, touchgfx::NoTransition, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+void FrontendApplicationBase::gotoMainScreenScreenCoverTransitionWest()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoMainScreenScreenCoverTransitionWestImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoMainScreenScreenCoverTransitionWestImpl()
+{
+    touchgfx::makeTransition<MainScreenView, MainScreenPresenter, touchgfx::CoverTransition<WEST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
+}
+
+// SetTimeScreen
+
+void FrontendApplicationBase::gotoSetTimeScreenScreenCoverTransitionEast()
+{
+    transitionCallback = touchgfx::Callback<FrontendApplicationBase>(this, &FrontendApplication::gotoSetTimeScreenScreenCoverTransitionEastImpl);
+    pendingScreenTransitionCallback = &transitionCallback;
+}
+
+void FrontendApplicationBase::gotoSetTimeScreenScreenCoverTransitionEastImpl()
+{
+    touchgfx::makeTransition<SetTimeScreenView, SetTimeScreenPresenter, touchgfx::CoverTransition<EAST>, Model >(&currentScreen, &currentPresenter, frontendHeap, &currentTransition, &model);
 }

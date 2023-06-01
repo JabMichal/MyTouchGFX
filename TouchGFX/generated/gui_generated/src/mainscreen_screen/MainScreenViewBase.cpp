@@ -74,9 +74,9 @@ void MainScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
     if (&src == &buttonWithLabel_setTime)
     {
         //Interaction_setTimeClicked
-        //When buttonWithLabel_setTime clicked call virtual function
-        //Call setTime
-        setTime();
+        //When buttonWithLabel_setTime clicked change screen to SetTimeScreen
+        //Go to SetTimeScreen with screen transition towards East
+        application().gotoSetTimeScreenScreenCoverTransitionEast();
     }
     if (&src == &buttonWithLabel_send)
     {
@@ -90,6 +90,6 @@ void MainScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton& s
         //Interaction_toggleDiode
         //When toggleButton_diode clicked execute C++ code
         //Execute C++ code
-        HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_13);
+        //HAL_GPIO_TogglePin(GPIOG, GPIO_PIN_13);
     }
 }

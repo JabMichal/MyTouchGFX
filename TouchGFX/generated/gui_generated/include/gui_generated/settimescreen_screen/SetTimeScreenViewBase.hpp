@@ -12,6 +12,7 @@
 #include <touchgfx/widgets/ButtonWithLabel.hpp>
 #include <touchgfx/widgets/TextArea.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
+#include <touchgfx/widgets/Button.hpp>
 
 class SetTimeScreenViewBase : public touchgfx::View<SetTimeScreenPresenter>
 {
@@ -91,6 +92,7 @@ protected:
     touchgfx::ButtonWithLabel buttonWithLabelBSPC;
     touchgfx::TextArea textArea_ms;
     touchgfx::TextAreaWithOneWildcard textArea_timeSettings;
+    touchgfx::Button button1;
 
     /*
      * Wildcard Buffers

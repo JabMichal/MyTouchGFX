@@ -9,13 +9,15 @@
 #include <mvp/MVPHeap.hpp>
 
 #include <touchgfx/transitions/NoTransition.hpp>
+#include <touchgfx/transitions/CoverTransition.hpp>
+
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/settimescreen_screen/SetTimeScreenView.hpp>
-#include <gui/settimescreen_screen/SetTimeScreenPresenter.hpp>
 #include <gui/mainscreen_screen/MainScreenView.hpp>
 #include <gui/mainscreen_screen/MainScreenPresenter.hpp>
+#include <gui/settimescreen_screen/SetTimeScreenView.hpp>
+#include <gui/settimescreen_screen/SetTimeScreenPresenter.hpp>
 
 
 /**
@@ -38,8 +40,8 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< SetTimeScreenView,
-            touchgfx::meta::TypeList< MainScreenView,
+    typedef touchgfx::meta::TypeList< MainScreenView,
+            touchgfx::meta::TypeList< SetTimeScreenView,
             touchgfx::meta::Nil >
             > GeneratedViewTypes;
 
@@ -52,8 +54,8 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef touchgfx::meta::TypeList< SetTimeScreenPresenter,
-            touchgfx::meta::TypeList< MainScreenPresenter,
+    typedef touchgfx::meta::TypeList< MainScreenPresenter,
+            touchgfx::meta::TypeList< SetTimeScreenPresenter,
             touchgfx::meta::Nil >
             > GeneratedPresenterTypes;
 
@@ -67,7 +69,9 @@ public:
      * @note All transition types used in the application MUST be added to this list!
      */
     typedef touchgfx::meta::TypeList< touchgfx::NoTransition,
-            touchgfx::meta::Nil
+            touchgfx::meta::TypeList< CoverTransition<EAST>,
+            touchgfx::meta::TypeList< CoverTransition<WEST>,
+            touchgfx::meta::Nil > >
             > GeneratedTransitionTypes;
 
     /**

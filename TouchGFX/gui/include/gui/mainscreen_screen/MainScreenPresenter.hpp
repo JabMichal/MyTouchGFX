@@ -27,6 +27,14 @@ public:
 
     virtual ~MainScreenPresenter() {};
 
+    void saveTime(uint16_t time){
+		model->saveTime(time);
+	}
+
+	uint16_t getTime(){
+		return model->getTime();
+	}
+
 private:
     MainScreenPresenter();
 

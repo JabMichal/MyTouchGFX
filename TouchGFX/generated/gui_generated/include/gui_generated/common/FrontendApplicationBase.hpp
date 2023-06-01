@@ -23,6 +23,11 @@ public:
     // MainScreen
     void gotoMainScreenScreenNoTransition();
 
+    void gotoMainScreenScreenCoverTransitionWest();
+
+    // SetTimeScreen
+    void gotoSetTimeScreenScreenCoverTransitionEast();
+
 protected:
     touchgfx::Callback<FrontendApplicationBase> transitionCallback;
     FrontendHeap& frontendHeap;
@@ -30,6 +35,11 @@ protected:
 
     // MainScreen
     void gotoMainScreenScreenNoTransitionImpl();
+
+    void gotoMainScreenScreenCoverTransitionWestImpl();
+
+    // SetTimeScreen
+    void gotoSetTimeScreenScreenCoverTransitionEastImpl();
 };
 
 #endif // FRONTENDAPPLICATIONBASE_HPP

@@ -118,6 +118,11 @@ SetTimeScreenViewBase::SetTimeScreenViewBase() :
     textArea_timeSettings.setWildcard(textArea_timeSettingsBuffer);
     textArea_timeSettings.setTypedText(touchgfx::TypedText(T___SINGLEUSE_RZV9));
     add(textArea_timeSettings);
+
+    button1.setXY(0, 0);
+    button1.setBitmaps(touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_NORMAL_ID), touchgfx::Bitmap(BITMAP_ALTERNATE_THEME_IMAGES_WIDGETS_BUTTON_REGULAR_HEIGHT_50_MEDIUM_ROUNDED_PRESSED_ID));
+    button1.setAction(buttonCallback);
+    add(button1);
 }
 
 SetTimeScreenViewBase::~SetTimeScreenViewBase()
@@ -208,5 +213,12 @@ void SetTimeScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton
         //When buttonWithLabelBSPC clicked call virtual function
         //Call backspace
         backspace();
+    }
+    if (&src == &button1)
+    {
+        //Interaction1
+        //When button1 clicked change screen to MainScreen
+        //Go to MainScreen with screen transition towards West
+        application().gotoMainScreenScreenCoverTransitionWest();
     }
 }

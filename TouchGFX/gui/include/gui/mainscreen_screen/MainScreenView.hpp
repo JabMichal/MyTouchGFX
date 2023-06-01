@@ -11,7 +11,9 @@ public:
     virtual ~MainScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+
 protected:
+    uint16_t time_ms;
 };
 
 #endif // MAINSCREENVIEW_HPP
